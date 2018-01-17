@@ -7,5 +7,5 @@ package com.abin.lee.spring.cloud.config.server.test;
  */
 public class AppTest {
 
-    
+
 }
