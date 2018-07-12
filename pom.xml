@@ -17,6 +17,7 @@
         <module>cloud-sys-common</module>
         <module>cloud-service-hystrix2</module>
         <module>cloud-dashboard-hystrix2</module>
+        <module>cloud-monitor-admin2</module>
     </modules>
 
     <packaging>pom</packaging>
