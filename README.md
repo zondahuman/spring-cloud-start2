@@ -8,6 +8,10 @@ https://zipkin.io/pages/quickstart.html
 部署Zipkin分布式性能追踪日志系统的操作记录(npm安装)
 https://blog.csdn.net/varyall/article/details/81014081
 
+
+从零开始搭springcloud(七) SpringBootAdmin
+https://blog.csdn.net/u013305783/article/details/80383917
+
 spring-cloud
 https://github.com/hryou0922/spring_cloud
 http://blog.didispace.com/tags/Spring-Cloud-Sleuth/
