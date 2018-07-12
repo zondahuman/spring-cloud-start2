@@ -15,6 +15,8 @@
         <module>cloud-dashboard-zipkin2</module>
         <module>cloud-service-zipkin2</module>
         <module>cloud-sys-common</module>
+        <module>cloud-service-hystrix2</module>
+        <module>cloud-dashboard-hystrix2</module>
     </modules>
 
     <packaging>pom</packaging>
