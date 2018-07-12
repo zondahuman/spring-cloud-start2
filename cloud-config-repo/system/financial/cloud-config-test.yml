@@ -1,0 +1,4 @@
+simple:
+        config:
+          name: financial-test
+          age: 12

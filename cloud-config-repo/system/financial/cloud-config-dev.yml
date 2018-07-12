@@ -1,0 +1,4 @@
+simple:
+  config:
+    name: financial-dev
+    age: 1
