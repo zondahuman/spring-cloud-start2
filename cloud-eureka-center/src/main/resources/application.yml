@@ -4,6 +4,9 @@ spring:
         application:
                       name: cloud-eureka-center
 ## eureka ： 主要配置属性在EurekaInstanceConfigBean和EurekaClientConfigBean中
+        boot:
+              admin:
+                    url: http://localhost:7088
 eureka:
         instance:
                 # hostname: 127.0.0.1

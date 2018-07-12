@@ -30,7 +30,12 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
-
+        <!-- spring cloud admin 收集监控信息,发送到admin server -->
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <version>1.5.4</version>
+        </dependency>
 
         <!-- http方式实现收集 -->
         <!--<dependency>-->

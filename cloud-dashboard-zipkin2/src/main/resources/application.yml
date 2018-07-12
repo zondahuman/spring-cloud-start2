@@ -24,3 +24,6 @@ spring:
                               # 配置mysql
                    storage:
                             type: mysql
+       boot:
+            admin:
+                  url: http://localhost:7088

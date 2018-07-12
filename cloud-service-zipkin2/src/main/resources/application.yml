@@ -9,3 +9,7 @@ spring:
                         #  采样率，默认值为0.1f，现在为了测试设置100%采集
                         #zipkin采样率，默认为0.1，改为1后全采样，但是会降低接口调用效率
                         percentage: 1
+        boot:
+              admin:
+                    url: http://localhost:7088
+

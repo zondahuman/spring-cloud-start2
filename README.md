@@ -28,6 +28,9 @@ http://localhost:9411/zipkin/
 telnet 18.179.30.249 9411
 http://18.179.30.249:9411/zipkin/
 
+Admin Monitor
+http://localhost:7088
+
 
 
 
