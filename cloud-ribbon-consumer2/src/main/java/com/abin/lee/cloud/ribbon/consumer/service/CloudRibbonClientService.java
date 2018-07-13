@@ -24,7 +24,7 @@ public class CloudRibbonClientService {
             @HystrixProperty(name = "execution.timeout.enabled", value = "true")},fallbackMethod = "addServiceFallBack")
     public String addService(Integer param1, Integer param2){
         log.info("param1=" + param1 + ", param2=" + param2);
-        String result = restTemplate.getForEntity("http://cloud-service-provider/add?a=" + param1 + "&b=" + param2, String.class).getBody();
+        String result = restTemplate.getForEntity("http://cloud-service-provider/add?param1=" + param1 + "&param2=" + param2, String.class).getBody();
         log.info("param1=" + param1 + ", param2=" + param2 + ", result=" + result);
         return result;
     }

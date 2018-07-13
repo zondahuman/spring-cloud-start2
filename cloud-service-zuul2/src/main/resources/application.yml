@@ -58,9 +58,9 @@ hystrix:
 zuul:
       routes:
               service1:
-                        path: /ribbon-client/**
+                        path: /cloud-client/**
                         serviceId: cloud-ribbon-consumer
               service2: # routes to service2
-                        path: /ribbon-consumer/**
-                        serviceId: cloud-ribbon-consumer
+                        path: /cloud-consumer/**
+                        serviceId: cloud-ribbon-consumer1
 

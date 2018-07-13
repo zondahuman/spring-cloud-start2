@@ -3,6 +3,7 @@ package com.abin.lee.cloud.service.zuul.filter;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -20,7 +21,7 @@ public class CloudZuulFilter extends ZuulFilter {
      */
     @Override
     public String filterType() {
-        return "pre";
+        return FilterConstants.PRE_TYPE;
     }
 
     /**
@@ -42,7 +43,7 @@ public class CloudZuulFilter extends ZuulFilter {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         String accessToken = String.valueOf(request.getParameter("token"));
-        log.info("token=" + accessToken );
+        log.info("--------------------------token=" + accessToken );
         if (!accessToken.equals("zz")) {
             ctx.setSendZuulResponse(false);
             ctx.setResponseStatusCode(401);

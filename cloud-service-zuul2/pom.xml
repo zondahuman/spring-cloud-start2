@@ -41,6 +41,23 @@
             <scope>test</scope>
         </dependency>
 
+
+        <!-- spring cloud admin 收集监控信息,发送到admin server -->
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <version>1.5.4</version>
+        </dependency>
+
+
+        <dependency>
+            <artifactId>cloud-sys-common</artifactId>
+            <groupId>com.abin.lee</groupId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
+
     </dependencies>
 
 
