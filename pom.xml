@@ -18,6 +18,9 @@
         <module>cloud-service-hystrix2</module>
         <module>cloud-dashboard-hystrix2</module>
         <module>cloud-monitor-admin2</module>
+        <module>cloud-service-provider2</module>
+        <module>cloud-ribbon-consumer2</module>
+        <module>cloud-feign-consumer2</module>
     </modules>
 
     <packaging>pom</packaging>

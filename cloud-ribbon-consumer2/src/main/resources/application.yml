@@ -1,0 +1,37 @@
+# port
+server:
+        port: 9466
+spring:
+        application:
+                      name: cloud-ribbon-consumer
+         zipkin:
+                # 启动zipkin
+                enabled: true
+                # 指定zipkin的地址
+                baseUrl: http://localhost:9411/
+        sleuth:
+                sampler:
+                        #  采样率，默认值为0.1f，现在为了测试设置100%采集
+                        #zipkin采样率，默认为0.1，改为1后全采样，但是会降低接口调用效率
+                        percentage: 1
+        boot:
+              admin:
+                      url: http://localhost:7088
+
+eureka:
+        client:
+                serviceUrl:
+                  # 服务器注册/获取服务器的zone
+                  defaultZone: http://127.0.0.1:8761/eureka/
+                  # defaultZone: http://192.168.21.3:8761/eureka/,http://192.168.21.4:8761/eureka/
+        instance:
+                prefer-ip-address: true
+
+info:
+      version: @project.version@
+      spring-boot-version: @project.parent.version@
+
+#来开启一些管理功能，且须在配置文件加入一句：
+management:
+            security:
+                      enabled: false
