@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 
 /**
  * Created by abin on 2018/5/2 21:46.
- *
+ * https://blog.csdn.net/qq_19301269/article/details/78920821
  *
  */
 @EnableZuulProxy

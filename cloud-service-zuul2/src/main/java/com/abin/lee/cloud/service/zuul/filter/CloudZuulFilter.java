@@ -2,6 +2,7 @@ package com.abin.lee.cloud.service.zuul.filter;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
  * 编写一个zuul过滤器，用来控制权限。每次发送请求的时候都需要一个token，如果没有token就没有权限，在被路由之前过滤器就会自动拦截掉返回401错误。
  * https://blog.csdn.net/qq_19301269/article/details/78920821
  */
+@Slf4j
 public class CloudZuulFilter extends ZuulFilter {
 
     /**
@@ -39,7 +41,8 @@ public class CloudZuulFilter extends ZuulFilter {
     public Object run() {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
-        String accessToken = String.valueOf(request.getParameter("Token"));
+        String accessToken = String.valueOf(request.getParameter("token"));
+        log.info("token=" + accessToken );
         if (!accessToken.equals("zz")) {
             ctx.setSendZuulResponse(false);
             ctx.setResponseStatusCode(401);
