@@ -54,3 +54,13 @@ hystrix:
                                                             timeoutInMilliseconds: 8000  #命令执行超时时间，默认1000ms
 
 
+# routes to service1
+zuul:
+      routes:
+              service1:
+                        path: /ribbon-client/**
+                        serviceId: cloud-ribbon-consumer
+              service2: # routes to service2
+                        path: /ribbon-consumer/**
+                        serviceId: cloud-ribbon-consumer
+

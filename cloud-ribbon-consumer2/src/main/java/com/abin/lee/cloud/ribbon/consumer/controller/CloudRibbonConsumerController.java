@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
  *
  */
 @RestController
-@RequestMapping("/ribbon-client")
+@RequestMapping("/ribbon-consumer")
 @Slf4j
-public class CloudRibbonClientController {
+public class CloudRibbonConsumerController {
 
     @Autowired
     CloudRibbonClientService cloudRibbonClientService;
