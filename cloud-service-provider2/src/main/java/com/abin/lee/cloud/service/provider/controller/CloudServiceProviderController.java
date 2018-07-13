@@ -1,7 +1,6 @@
 package com.abin.lee.cloud.service.provider.controller;
 
 import com.abin.lee.cloud.sys.common.JsonUtil;
-import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import org.apache.log4j.Logger;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -14,9 +13,8 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * Created by lee on 2016/12/9.
  * 创建“服务提供方”
- *下面我们创建提供服务的客户端，并向服务注册中心注册自己。
+ * 下面我们创建提供服务的客户端，并向服务注册中心注册自己。
  */
 @RestController
 public class CloudServiceProviderController {
@@ -28,8 +26,8 @@ public class CloudServiceProviderController {
     @Resource
     Registration registration;
 
-    @RequestMapping(value = "/add" ,method = RequestMethod.GET)
-    public Integer add(Integer a, Integer b){
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
+    public Integer add(Integer a, Integer b) {
         String serviceId = registration.getServiceId();
         List<ServiceInstance> instanceList = discoveryClient.getInstances(serviceId);
         Integer r = a + b;
