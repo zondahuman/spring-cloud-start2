@@ -26,7 +26,7 @@ public class CloudServiceProviderController {
     @Resource
     Registration registration;
 
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
+    @RequestMapping(value = "/add", method = {RequestMethod.GET, RequestMethod.POST})
     public Integer add(Integer a, Integer b) {
         String serviceId = registration.getServiceId();
         List<ServiceInstance> instanceList = discoveryClient.getInstances(serviceId);

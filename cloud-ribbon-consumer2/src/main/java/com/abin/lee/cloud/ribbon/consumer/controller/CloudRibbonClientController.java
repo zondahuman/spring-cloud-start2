@@ -15,9 +15,9 @@ public class CloudRibbonClientController {
     @Autowired
     CloudRibbonClientService cloudRibbonClientService;
 
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public String add(){
-        return cloudRibbonClientService.addService();
+    @RequestMapping(value = "/add", method = {RequestMethod.GET, RequestMethod.POST})
+    public String add(Integer param1, Integer param2){
+        return cloudRibbonClientService.addService(param1, param2);
     }
 
 
