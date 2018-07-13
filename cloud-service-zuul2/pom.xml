@@ -7,12 +7,9 @@
         <groupId>com.abin.lee</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-zuul-service2</artifactId>
-    <groupId>com.abin.lee</groupId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>cloud-service-zuul2</artifactId>
 
     <packaging>jar</packaging>
 
@@ -73,6 +70,3 @@
 
 
 </project>
-
-
-

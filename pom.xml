@@ -10,7 +10,6 @@
 
     <modules>
         <module>cloud-config-server2</module>
-        <module>cloud-zuul-service2</module>
         <module>cloud-eureka-center</module>
         <module>cloud-dashboard-zipkin2</module>
         <module>cloud-service-zipkin2</module>
@@ -21,6 +20,7 @@
         <module>cloud-service-provider2</module>
         <module>cloud-ribbon-consumer2</module>
         <module>cloud-feign-consumer2</module>
+        <module>cloud-service-zuul2</module>
     </modules>
 
     <packaging>pom</packaging>
