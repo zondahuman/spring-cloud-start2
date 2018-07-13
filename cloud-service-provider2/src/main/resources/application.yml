@@ -4,7 +4,7 @@ server:
 spring:
         application:
                       name: cloud-service-provider
-         zipkin:
+        zipkin:
                 # 启动zipkin
                 enabled: true
                 # 指定zipkin的地址
