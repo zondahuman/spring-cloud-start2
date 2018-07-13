@@ -51,3 +51,9 @@ eureka:
 info:
       version: @project.version@
       spring-boot-version: @project.parent.version@
+
+#来开启一些管理功能，且须在配置文件加入一句：
+management:
+            security:
+                      enabled: false
+

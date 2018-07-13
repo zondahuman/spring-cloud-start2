@@ -13,6 +13,14 @@ eureka:
 management:
             security:
                       enabled: false
+                      roles: SUPERUSER
+
+security:
+          user:
+                name: admin
+                password: admin
+          basic:
+                enabled: true
 
 info:
       version: @project.version@

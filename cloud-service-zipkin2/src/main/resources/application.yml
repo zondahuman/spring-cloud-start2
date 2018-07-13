@@ -14,10 +14,10 @@ spring:
                     url: http://localhost:7088
 
 info:
-      name: client
-      description: @project.description@
       version: @project.version@
-endpoints:
-            trace:
-                  enabled: true
-                  sensitive: false
+      spring-boot-version: @project.parent.version@
+
+#来开启一些管理功能，且须在配置文件加入一句：
+management:
+            security:
+                      enabled: false

@@ -7,6 +7,14 @@
 # 端口
 server:
         port: 10888
+info:
+      version: @project.version@
+      spring-boot-version: @project.parent.version@
+
+#来开启一些管理功能，且须在配置文件加入一句：
+management:
+            security:
+                      enabled: false
 
 spring:
         profiles:
@@ -17,7 +25,7 @@ spring:
               config:
                       server:
                               native:
-                                      searchLocations: classpath:/config/simple2/
+                                      searchLocations: classpath:/system/order/
         application:
                       name: config-config-gitsimple2
 
