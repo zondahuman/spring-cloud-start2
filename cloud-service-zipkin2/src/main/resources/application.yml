@@ -13,3 +13,11 @@ spring:
               admin:
                     url: http://localhost:7088
 
+info:
+      name: client
+      description: @project.description@
+      version: @project.version@
+endpoints:
+            trace:
+                  enabled: true
+                  sensitive: false

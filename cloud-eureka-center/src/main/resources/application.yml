@@ -7,6 +7,7 @@ spring:
         boot:
               admin:
                     url: http://localhost:7088
+
 eureka:
         instance:
                 # hostname: 127.0.0.1
@@ -45,3 +46,8 @@ eureka:
                wait-time-in-ms-when-sync-empty: 6000000
                # 集群之间相互更新节点信息的时间频率
                peer-eureka-nodes-update-interval-ms: 60000
+
+
+info:
+      version: @project.version@
+      spring-boot-version: @project.parent.version@
