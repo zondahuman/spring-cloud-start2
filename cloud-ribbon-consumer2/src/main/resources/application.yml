@@ -35,3 +35,22 @@ info:
 management:
             security:
                       enabled: false
+
+
+hystrix:
+        threadpool:
+                    default:
+                              coreSize: 500  #并发执行的最大线程数，默认10
+        command:
+                  paas-file:
+                              execution:
+                                        isolation:
+                                                    thread:
+                                                            timeoutInMilliseconds: 3600000
+                  default:
+                            execution:
+                                        isolation:
+                                                    thread:
+                                                            timeoutInMilliseconds: 8000  #命令执行超时时间，默认1000ms
+
+
