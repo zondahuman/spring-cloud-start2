@@ -32,6 +32,10 @@ Admin Monitor
 http://localhost:7088
 
 
+truncate table zipkin_spans ;
+truncate table zipkin_dependencies ;
+truncate table zipkin_annotations ;
+
 
 
 
