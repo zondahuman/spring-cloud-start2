@@ -17,20 +17,18 @@ public class CloudRibbonClientAddTest {
     public static void main(String[] args) throws IOException {
 
 
-
-
     }
 
     @Test
     public void testZipkinSimple1() throws IOException {
         String result = OkHttpClientUtil.httpPost(httpUrl, null);
-        System.out.println("result="+result);
+        System.out.println("result=" + result);
     }
 
     @Test
     public void testZipkinSimple2() throws IOException {
         String result = OkHttpClientUtil.httpGet(httpUrl);
-        System.out.println("result="+result);
+        System.out.println("result=" + result);
     }
 
     @Test
@@ -40,18 +38,18 @@ public class CloudRibbonClientAddTest {
         params.put("param2", "67890");
 
         String result = OkHttpClientUtil.httpPost(httpCreateUrl, params);
-        System.out.println("result="+result);
+        System.out.println("result=" + result);
     }
 
     @Test
     public void testZipkinCreateLoop() throws IOException {
-        for (int i = 0; i <1000 ; i++) {
+        for (int i = 0; i < 1000; i++) {
             Map<String, String> params = Maps.newHashMap();
-            params.put("param1", (int)(Math.random()*100000) + "");
-            params.put("param2", (int)(Math.random()*100000) + "");
+            params.put("param1", (int) (Math.random() * 100000) + "");
+            params.put("param2", (int) (Math.random() * 100000) + "");
 
             String result = OkHttpClientUtil.httpPost(httpCreateUrl, params);
-            System.out.println("result="+result);
+            System.out.println("result=" + result);
         }
 
     }
