@@ -28,9 +28,9 @@ spring:
 eureka:
         client:
                 serviceUrl:
-                  # 服务器注册/获取服务器的zone
-                  defaultZone: http://127.0.0.1:8761/eureka/
-                  # defaultZone: http://192.168.21.3:8761/eureka/,http://192.168.21.4:8761/eureka/
+                            # 服务器注册/获取服务器的zone
+                            defaultZone: http://127.0.0.1:8761/eureka/
+                            # defaultZone: http://192.168.21.3:8761/eureka/,http://192.168.21.4:8761/eureka/
         instance:
                 prefer-ip-address: true
 
