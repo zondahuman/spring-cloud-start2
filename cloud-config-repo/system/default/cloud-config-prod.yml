@@ -1,0 +1,6 @@
+default:
+            config:
+                    name: default-prod
+                    count: 12
+
+

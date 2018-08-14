@@ -19,8 +19,9 @@ import java.util.List;
 /**
  * 创建“服务提供方”
  * 下面我们创建提供服务的客户端，并向服务注册中心注册自己。
+ * https://www.cnblogs.com/ityouknow/p/6906917.html
  */
-@RefreshScope
+@RefreshScope // 使用该注解的类，会在接到SpringCloud配置中心配置刷新的时候，自动将新的配置更新到该类对应的字段中。
 @Slf4j
 @RestController
 public class CloudServiceProviderController {
