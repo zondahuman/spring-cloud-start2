@@ -20,10 +20,10 @@ spring:
               config:
                       server:
                               native: # 指定搜索路径，如果有多个路径则使用,分隔
-                                   searchPaths: cloud-config-server2/system/order,cloud-config-server2/system/default,cloud-config-server2/system/financial,cloud-config-server2/business/sku,cloud-config-server2/business/spu
-#                                      searchLocations: classpath:/system/order/
+                                    searchPaths: cloud-config-repo/system/order,cloud-config-repo/system/default,cloud-config-repo/system/financial,cloud-config-repo/business/sku,cloud-config-repo/business/spu
+                                 #  searchPaths: cloud-config-repo/system/financial
         application:
-                      name: cloud-config-server2
+                      name: cloud-config
 
 # 服务器注册服务器的zone
 eureka:
