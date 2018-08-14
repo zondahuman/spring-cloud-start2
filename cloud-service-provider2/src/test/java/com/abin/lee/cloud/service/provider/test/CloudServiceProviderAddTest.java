@@ -46,5 +46,12 @@ public class CloudServiceProviderAddTest {
     }
 
 
+    @Test
+    public void testGetConf() throws IOException {
+        String result = OkHttpClientUtil.httpGet(httpConfUrl);
+        System.out.println("result="+result);
+    }
+
+
 
 }
