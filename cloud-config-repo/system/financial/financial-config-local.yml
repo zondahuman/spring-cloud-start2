@@ -1,0 +1,6 @@
+financial:
+            config:
+                    name: financial-local
+                    count: 12
+
+
