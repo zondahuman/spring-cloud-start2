@@ -24,5 +24,9 @@ spring.cloud.config.discovery.service-id：指定配置中心的service-id，便
 
 配置文件访问地址：
 http://localhost:7001/cloud-config/dev
-http://localhost:7001/cloud-config/test
-http://localhost:7001/cloud-config/
+http://localhost:7001/order-config/test
+http://localhost:7001/sku-config/test
+http://localhost:7001/spu-config/test
+
+
+
