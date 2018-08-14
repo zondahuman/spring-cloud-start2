@@ -5,15 +5,15 @@ server:
 # 指定配置文件所在的git工程路径
 spring:
        application:
-                      name: cloud-config
+                      name: cloud-config-server2
        cloud:
              config:
                      server:
                              git:
                                    #  配置文件只搜索url目录下的searchPaths
-                                   uri: https://github.com/zondahuman/spring-cloud-start2.git
+                                   uri: https://github.com/zondahuman/spring-cloud-start2/
                                    # 指定搜索路径，如果有多个路径则使用,分隔
-                                    searchPaths: cloud-config-repo/system/order,cloud-config-repo/system/default,cloud-config-repo/system/financial,cloud-config-repo/business/sku,cloud-config-repo/business/spu
+                                   searchPaths: cloud-config-repo/system/order,cloud-config-repo/system/default,cloud-config-repo/system/financial,cloud-config-repo/business/sku,cloud-config-repo/business/spu
                                  #  searchPaths: cloud-config-repo/system/financial
                                    # 对于使用git,svn做为后端配置，从远程库获取配置文件，需要存储到本地文件
                                    basedir: /tmp/cloud-config-server2
@@ -26,7 +26,7 @@ spring:
 eureka:
        client:
                serviceUrl:
-                            defaultZone: http://127.0.0.1:10761/eureka/
+                            defaultZone: http://127.0.0.1:8761/eureka/
        instance:
                   prefer-ip-address: true
 

@@ -5,7 +5,7 @@ server:
 # 指定配置文件所在的git工程路径
 spring:
         application:
-                      name: cloud-config
+                      name: cloud-config-server2
         cloud:
               config:
                       server:
