@@ -1,11 +1,6 @@
 spring:
         application:
                       name: cloud-dashboard-zipkin
-#       zipkin:
-#               enabled: false
-               #    base-url: http://localhost:9411/
-            #  rabbitmq:
-            #    host: ${RABBIT_HOST:localhost}
              # 配置mysql
         datasource:
                    schema: classpath:/mysql.sql
@@ -20,18 +15,24 @@ spring:
         sleuth:
                    sampler:
                             percentage: 1.0
-                   enabled: false
-        zipkin:
-#                   enabled: true
-                                #    base-url: http://localhost:9411/
-                             #  rabbitmq:
-                             #    host: ${RABBIT_HOST:localhost}
-                              # 配置mysql
-                   storage:
-                            type: mysql
+                   enabled: true
         boot:
               admin:
                       url: http://localhost:7088
+
+zipkin:
+         enabled: true
+         storage:
+                  # mysql conf
+                  type: mysql
+                  # elasticsearch conf
+#                  type: elasticsearch
+#                                      elasticsearch:
+#                                                     cluster: elasticsearch
+#                                                     hosts: http://localhost:9200
+#                                                     index: zipkin
+#                                                     index-shards: 5
+#                                                     index-replicas: 1
 
 info:
       version: @project.version@

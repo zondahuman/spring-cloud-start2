@@ -43,6 +43,18 @@ public class CloudRibbonClientAddTest {
         System.out.println("result="+result);
     }
 
+    @Test
+    public void testZipkinCreateLoop() throws IOException {
+        for (int i = 0; i <1000 ; i++) {
+            Map<String, String> params = Maps.newHashMap();
+            params.put("param1", (int)(Math.random()*100000) + "");
+            params.put("param2", (int)(Math.random()*100000) + "");
+
+            String result = OkHttpClientUtil.httpPost(httpCreateUrl, params);
+            System.out.println("result="+result);
+        }
+
+    }
 
 
 }
