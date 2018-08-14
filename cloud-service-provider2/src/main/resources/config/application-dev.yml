@@ -18,10 +18,12 @@ spring:
               admin:
                       url: http://localhost:7088
         # spring cloud git conf
-#        cloud:
-#               config:
-#                        profile: dev
-#                        uri: http://localhost:7001/
+        cloud:
+               config:
+                        name: financial-config
+                        profile: dev
+                        label: master
+                        uri: http://localhost:7001/
 
 eureka:
         client:
@@ -42,7 +44,14 @@ management:
                       enabled: false
 
 
-#fin:
-#    configs:
-#            name: ${financial.config.name}
-#            count: ${financial.config.count}
+
+financial:
+            configs:
+                        names: ${financial.config.name}
+                        counts: ${financial.config.count}
+
+
+logging:
+        levels:
+                org.springframework.boot.env.PropertySourcesLoader: TRACE
+                org.springframework.web: DEBUG

@@ -33,9 +33,9 @@ public class CloudServiceProviderController {
     @Resource
     Registration registration;
 
-    @Value("${financial.config.name}")
+    @Value("${financial.configs.names}")
     String financialName;
-    @Value("${financial.config.count}")
+    @Value("${financial.configs.counts}")
     String financialCount;
 
 
