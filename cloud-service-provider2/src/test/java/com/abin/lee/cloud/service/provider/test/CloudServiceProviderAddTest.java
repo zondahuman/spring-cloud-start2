@@ -15,10 +15,9 @@ public class CloudServiceProviderAddTest {
     private static final String httpCreateUrl = "http://localhost:9455/add";
 
     private static final String httpConfUrl = "http://localhost:9455/getConf";
-//    private static final String httpCreateUrl = "http://localhost:9455/add";
+
+    //    private static final String httpCreateUrl = "http://localhost:9455/add";
     public static void main(String[] args) throws IOException {
-
-
 
 
     }
@@ -26,13 +25,13 @@ public class CloudServiceProviderAddTest {
     @Test
     public void testZipkinSimple1() throws IOException {
         String result = OkHttpClientUtil.httpPost(httpUrl, null);
-        System.out.println("result="+result);
+        System.out.println("result=" + result);
     }
 
     @Test
     public void testZipkinSimple2() throws IOException {
         String result = OkHttpClientUtil.httpGet(httpUrl);
-        System.out.println("result="+result);
+        System.out.println("result=" + result);
     }
 
     @Test
@@ -42,16 +41,15 @@ public class CloudServiceProviderAddTest {
         params.put("param2", "67890");
 
         String result = OkHttpClientUtil.httpPost(httpCreateUrl, params);
-        System.out.println("result="+result);
+        System.out.println("result=" + result);
     }
 
 
     @Test
     public void testGetConf() throws IOException {
         String result = OkHttpClientUtil.httpGet(httpConfUrl);
-        System.out.println("result="+result);
+        System.out.println("result=" + result);
     }
-
 
 
 }
