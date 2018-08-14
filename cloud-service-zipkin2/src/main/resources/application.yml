@@ -21,3 +21,8 @@ info:
 management:
             security:
                       enabled: false
+logging:
+        level:
+              root: INFO
+              org.springframework.web.servlet.DispatcherServlet: DEBUG
+              org.springframework.cloud.sleuth: DEBUG
