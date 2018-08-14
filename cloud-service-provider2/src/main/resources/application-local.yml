@@ -17,6 +17,11 @@ spring:
         boot:
               admin:
                       url: http://localhost:7088
+        # spring cloud git conf
+        cloud:
+               config:
+                        profile: dev
+                        uri: http://localhost:7001/
 
 eureka:
         client:
@@ -37,12 +42,7 @@ management:
                       enabled: false
 
 
-# spring cloud git conf
-spring:
-        cloud:
-               config:
-                        profile: dev
-                        uri: http://localhost:7001/
+
 financial:
             config:
                     name: ${financial.config.name}

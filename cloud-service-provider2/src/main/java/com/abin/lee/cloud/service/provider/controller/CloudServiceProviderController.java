@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.serviceregistry.Registration;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -19,6 +20,7 @@ import java.util.List;
  * 创建“服务提供方”
  * 下面我们创建提供服务的客户端，并向服务注册中心注册自己。
  */
+@RefreshScope
 @Slf4j
 @RestController
 public class CloudServiceProviderController {
@@ -29,9 +31,9 @@ public class CloudServiceProviderController {
     DiscoveryClient discoveryClient;
     @Resource
     Registration registration;
-    @Value("${financial.config.name}")
+    @Value("${financial.configs.name}")
     String financialName;
-    @Value("${financial.config.count}")
+    @Value("${financial.configs.count}")
     String financialCount;
 
 
