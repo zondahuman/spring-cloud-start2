@@ -32,9 +32,10 @@ public class CloudServiceProviderController {
     DiscoveryClient discoveryClient;
     @Resource
     Registration registration;
-    @Value("${financial.configs.name}")
+
+    @Value("${financial.config.name}")
     String financialName;
-    @Value("${financial.configs.count}")
+    @Value("${financial.config.count}")
     String financialCount;
 
 
@@ -55,7 +56,9 @@ public class CloudServiceProviderController {
     @RequestMapping(value = "/getConf", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public void getConf() {
-        log.info("financialName=" + financialName + ", financialCount=" + financialCount);
+        String finName = financialName;
+        String finCount = financialCount;
+        log.info("finName=" + finName + ", finCount=" + finCount);
 
 
     }
