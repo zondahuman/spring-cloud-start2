@@ -3,11 +3,13 @@ package com.abin.lee.cloud.service.provider.controller;
 import com.abin.lee.cloud.sys.common.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.serviceregistry.Registration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -27,8 +29,14 @@ public class CloudServiceProviderController {
     DiscoveryClient discoveryClient;
     @Resource
     Registration registration;
+    @Value("${financial.config.name}")
+    String financialName;
+    @Value("${financial.config.count}")
+    String financialCount;
+
 
     @RequestMapping(value = "/add", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
     public Integer add(Integer param1, Integer param2) {
         log.info("param1=" + param1 + ", param2=" + param2);
 
@@ -38,6 +46,14 @@ public class CloudServiceProviderController {
 //        logger.info("/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r);
         logger.info("/add, instanceList : " + JsonUtil.toJson(instanceList) + ", result:" + result);
         return result;
+    }
+
+
+    @RequestMapping(value = "/getConf", method = {RequestMethod.GET, RequestMethod.POST})
+    public void getConf() {
+        log.info("financialName=" + financialName + ", financialCount=" + financialCount);
+
+
     }
 
 
