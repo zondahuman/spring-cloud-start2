@@ -1,0 +1,4 @@
+business:
+            sku:
+                    name: spu-test
+                    count: 12

@@ -1,6 +1,6 @@
-simple:
-        config:
-                name: financial
-                age: 12
+financial:
+            config:
+                    name: financial-prod
+                    count: 12
 
 

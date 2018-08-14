@@ -1,6 +1,6 @@
-simple:
-        config:
-                name: order
-                age: 12
+order:
+       config:
+                name: order-prod
+                count: 12
 
 

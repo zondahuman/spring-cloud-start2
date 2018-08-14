@@ -1,4 +1,6 @@
-simple:
-        config:
-          name: financial-test
-          age: 12
+financial:
+            config:
+                    name: financial-test
+                    count: 12
+
+

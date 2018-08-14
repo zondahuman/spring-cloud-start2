@@ -1,0 +1,4 @@
+business:
+            sku:
+                    name: sku-test
+                    count: 12

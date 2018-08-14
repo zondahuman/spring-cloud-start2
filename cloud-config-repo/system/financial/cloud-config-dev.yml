@@ -1,4 +1,6 @@
-simple:
-  config:
-    name: financial-dev
-    age: 1
+financial:
+            config:
+                    name: financial-dev
+                    count: 12
+
+

@@ -1,0 +1,37 @@
+# local environment
+# 端口
+server:
+        port: 7001
+info:
+      version: @project.version@
+      spring-boot-version: @project.parent.version@
+
+#来开启一些管理功能，且须在配置文件加入一句：
+management:
+            security:
+                      enabled: false
+
+spring:
+        profiles:
+                  # native：启动从本地读取配置文件，必须指定active的值，才可以使用本地文件配置模式
+                  active: native
+          # 自定义配置文件路径
+        cloud:
+              config:
+                      server:
+                              native: # 指定搜索路径，如果有多个路径则使用,分隔
+                                   searchPaths: cloud-config-server2/system/order,cloud-config-server2/system/default,cloud-config-server2/system/financial,cloud-config-server2/business/sku,cloud-config-server2/business/spu
+#                                      searchLocations: classpath:/system/order/
+        application:
+                      name: cloud-config-server2
+
+# 服务器注册服务器的zone
+eureka:
+        client:
+                serviceUrl:
+                            defaultZone: http://127.0.0.1:8761/eureka/
+        instance:
+                  prefer-ip-address: true
+
+
+
