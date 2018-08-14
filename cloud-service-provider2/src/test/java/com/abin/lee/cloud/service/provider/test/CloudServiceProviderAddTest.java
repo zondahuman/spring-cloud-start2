@@ -14,6 +14,8 @@ public class CloudServiceProviderAddTest {
     private static final String httpUrl = "http://localhost:9455/add";
     private static final String httpCreateUrl = "http://localhost:9455/add";
 
+    private static final String httpConfUrl = "http://localhost:9455/getConf";
+//    private static final String httpCreateUrl = "http://localhost:9455/add";
     public static void main(String[] args) throws IOException {
 
 

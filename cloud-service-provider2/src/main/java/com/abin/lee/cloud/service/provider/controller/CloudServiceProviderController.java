@@ -50,6 +50,7 @@ public class CloudServiceProviderController {
 
 
     @RequestMapping(value = "/getConf", method = {RequestMethod.GET, RequestMethod.POST})
+    @ResponseBody
     public void getConf() {
         log.info("financialName=" + financialName + ", financialCount=" + financialCount);
 
