@@ -11,7 +11,12 @@ import org.springframework.cloud.netflix.turbine.EnableTurbine;
 @SpringBootApplication
 @EnableEurekaClient // 配置本应用将使用服务注册和服务发现
 @EnableHystrixDashboard
-@EnableTurbine // http://127.0.0.1:12086/hystrix
+@EnableTurbine
+/**
+ * http://127.0.0.1:12086/hystrix
+ * http://127.0.0.1:12086/turbine.stream
+ */
+
 public class HystrixDashboardCloudApplication {
 
 //    public static void main(String[] args) {

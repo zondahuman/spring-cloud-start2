@@ -1,0 +1,24 @@
+spring:
+        application:
+                      name: cloud-turbine-hystrix
+             # 配置mysql
+server:
+        port: 2260
+management:
+            port: 8990
+
+
+eureka:
+        client:
+                serviceUrl:
+                  # 服务器注册/获取服务器的zone
+                  defaultZone: http://127.0.0.1:8761/eureka/
+                  # defaultZone: http://192.168.21.3:8761/eureka/,http://192.168.21.4:8761/eureka/
+        instance:
+                prefer-ip-address: true
+
+turbine:
+          app-config: cloud-feign-consumer    #指定了要监控的应用名字为ribbon-consumer
+          cluster-name-expression: new String("default")   #表示集群的名字为default
+          #表示同一主机上的服务通过host和port的组合来进行区分，默认情况下是使用host来区分，这样会使本地调试有问题
+          combine-host-port: true

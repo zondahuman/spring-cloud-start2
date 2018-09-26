@@ -21,6 +21,7 @@
         <module>cloud-ribbon-consumer2</module>
         <module>cloud-feign-consumer2</module>
         <module>cloud-service-zuul2</module>
+        <module>cloud-turbine-hystrix2</module>
     </modules>
 
     <packaging>pom</packaging>

@@ -9,56 +9,44 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-feign-consumer2</artifactId>
+    <artifactId>cloud-turbine-hystrix2</artifactId>
 
-
-
+    <properties>
+        <!--设置字符编码及java版本 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+    </properties>
     <dependencies>
+        <!--增加turbine的依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-feign</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <artifactId>spring-cloud-starter-turbine</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-
+        <!--用于测试的，本例可省略 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <!-- spring cloud admin 收集监控信息,发送到admin server -->
-        <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
-            <version>1.5.4</version>
-        </dependency>
-
-        <dependency>
-            <artifactId>cloud-sys-common</artifactId>
-            <groupId>com.abin.lee</groupId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
     </dependencies>
+
+
 
 
 
     <build>
         <plugins>
+            <!--使用该插件打包 -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
-
 
 
 
